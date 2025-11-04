@@ -1,8 +1,8 @@
 
-export default function Strike() {
+export default function Strike({strikeClass}) {
   return (
     <>
-      <h2 className="strike strike-diagonal-1"></h2>
+      <h2 className={`strike ${strikeClass}`}></h2>
     </>
   );
 }
