@@ -1,0 +1,142 @@
+// Resets
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// Tic Tac Toe
+body {
+  position: relative;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  height: 100vh;
+}
+h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+  text-align: center;
+  color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px rgb(0, 145, 255),
+      0 0 82px rgb(0, 145, 255),
+      0 0 92px rgb(0, 145, 255),
+      0 0 102px rgb(0, 145, 255),
+      0 0 151px rgb(0, 145, 255);
+}
+
+// Board
+.tictactoe {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  border: 2px solid white;
+  padding: 10px 25px 75px 25px;
+}
+.board {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  position: relative;
+}
+
+// Tiles
+.tile {
+  cursor: pointer;
+  color: currentColor;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-border {
+  border-right: 5px solid blueviolet;
+}
+.bottom-border {
+  border-bottom: 5px solid blueviolet;
+}
+
+.x-hover:hover::after {
+  content: "X";
+  opacity: 0.4;
+}
+.o-hover:hover::after {
+  content: "O";
+  opacity: 0.4;
+}
+
+// Strike
+.strike {
+  position: absolute;
+  background-color: darkorange;
+}
+
+.strike-row-1 {
+  width: 100%;
+  height: 4px;
+  top: 15%;
+}
+.strike-row-2 {
+  width: 100%;
+  height: 4px;
+  top: 48%;
+}
+.strike-row-3 {
+  width: 100%;
+  height: 4px;
+  top: 83%;
+}
+.strike-column-1 {
+  height: 100%;
+  width: 4px;
+  left: 15%;
+}
+.strike-column-2 {
+  height: 100%;
+  width: 4px;
+  left: 48%;
+}
+.strike-column-3 {
+  height: 100%;
+  width: 4px;
+  left: 83%;
+}
+.strike-diagonal-1 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+.strike-diagonal-2 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(-45deg);
+}
+
+//Game over
+.game-over {
+  text-align: center;
+  border: #5468ff 8px;
+  border-style: dotted;
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 1.5em;
+}
+
+.reset-button {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #0074a6;
+  color: white;
+  width: 100%;
+  font-size: 1.5em;
+  cursor: pointer;
+}
